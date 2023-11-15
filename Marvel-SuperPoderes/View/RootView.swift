@@ -37,6 +37,7 @@ struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
             .environment(\.locale, .init(identifier: "es"))
+            //.preferredColorScheme(.light)
         //.environment(\.locale, .init(identifier: "en"))
     }
 }
