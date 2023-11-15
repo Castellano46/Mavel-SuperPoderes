@@ -29,6 +29,8 @@ enum auth: String {
 }
 
 enum OrderBy: String {
+    case id = "id"
+    //
     case formerModified = "-modified"
     case startYear = "startYear"
 }

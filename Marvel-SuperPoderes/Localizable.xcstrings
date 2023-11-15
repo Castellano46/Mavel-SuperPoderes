@@ -2,13 +2,34 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Add Item" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "Item at %@" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "Select an item" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "Test" : {
       "comment" : "Localizable.strings\n  Marvel-SuperPoderes\n\n  Created by Pedro on 14/11/23.",

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB6C4E712B05229C000DEBA8 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C4E702B05229C000DEBA8 /* LoadView.swift */; };
+		EB6C4E732B0522CF000DEBA8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C4E722B0522CF000DEBA8 /* ErrorView.swift */; };
 		EB700F6C2B04B113001D8D8B /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB700F6B2B04B113001D8D8B /* StatusModel.swift */; };
 		EB700F6E2B04B249001D8D8B /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB700F6D2B04B249001D8D8B /* BaseNetwork.swift */; };
 		EB700F702B04B6C1001D8D8B /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB700F6F2B04B6C1001D8D8B /* HerosModel.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB6C4E702B05229C000DEBA8 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		EB6C4E722B0522CF000DEBA8 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		EB700F6B2B04B113001D8D8B /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		EB700F6D2B04B249001D8D8B /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		EB700F6F2B04B6C1001D8D8B /* HerosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosModel.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				EB7C29E82B03D74C0031AE4C /* RootView.swift */,
+				EB6C4E702B05229C000DEBA8 /* LoadView.swift */,
+				EB6C4E722B0522CF000DEBA8 /* ErrorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6C4E712B05229C000DEBA8 /* LoadView.swift in Sources */,
 				EB7C29A42B03C7470031AE4C /* Marvel_SuperPoderes.xcdatamodeld in Sources */,
 				EB700F6C2B04B113001D8D8B /* StatusModel.swift in Sources */,
 				EB7C299F2B03C7470031AE4C /* Marvel_SuperPoderesApp.swift in Sources */,
@@ -359,6 +366,7 @@
 				EB700F722B04B6D4001D8D8B /* SeriesModel.swift in Sources */,
 				EB7C29E92B03D74C0031AE4C /* RootView.swift in Sources */,
 				EB7C29E32B03D1DF0031AE4C /* RootViewModel.swift in Sources */,
+				EB6C4E732B0522CF000DEBA8 /* ErrorView.swift in Sources */,
 				EB7C29A12B03C7470031AE4C /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
