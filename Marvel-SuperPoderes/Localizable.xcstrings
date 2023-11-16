@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@" : {
+
+    },
     "Add Item" : {
       "localizations" : {
         "es" : {
@@ -11,6 +14,12 @@
         }
       }
     },
+    "BACK" : {
+
+    },
+    "Heroes" : {
+
+    },
     "Item at %@" : {
       "localizations" : {
         "es" : {
@@ -20,6 +29,9 @@
           }
         }
       }
+    },
+    "loading" : {
+
     },
     "Select an item" : {
       "localizations" : {

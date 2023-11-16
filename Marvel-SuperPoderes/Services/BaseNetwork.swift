@@ -37,7 +37,7 @@ enum OrderBy: String {
 
 struct BaseNetwork {
     
-    // Lista de heroes
+    // Heroes
     func getSessionHeros(sortBy orderMethod: OrderBy) -> URLRequest {
         
         let accessAuth = "?ts=\(auth.ts.rawValue)&apikey=\(auth.apikey.rawValue)&hash=\(auth.hash.rawValue)"
@@ -51,7 +51,7 @@ struct BaseNetwork {
         return request
     }
     
-    // Lista de series
+    // Series
     func getSessionHerosSeries(with heroId: Int, sortBy orderMethod: OrderBy) -> URLRequest {
         
         let accessAuth = "?ts=\(auth.ts.rawValue)&apikey=\(auth.apikey.rawValue)&hash=\(auth.hash.rawValue)"

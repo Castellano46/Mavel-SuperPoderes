@@ -13,7 +13,6 @@ final class RootViewModel: ObservableObject {
     //@Published var tokenJWT: String = ""
     @Published var heros: [Heros]?
     
-    
     var suscriptors = Set<AnyCancellable>()
     
     func getHeros(sortBy order: OrderBy) {

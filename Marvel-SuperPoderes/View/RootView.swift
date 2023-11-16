@@ -13,6 +13,25 @@ struct RootView: View {
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
+        
+        switch rootViewModel.status{
+        case Status.none:
+            withAnimation{
+                LoadView()
+            }
+        case .loading:
+            withAnimation{
+                LoadView()
+            }
+        case .loaded:
+            Text("Heroes")
+            //HeroesView(viewModel: viewmodel)
+        case .error(error: let errorString):
+            withAnimation{
+                ErrorView(error: errorString)
+            }
+        }
+        
         ZStack {
             Image(decorative: colorScheme == .dark ? "fondo2" : "fondo1")
                 .resizable()
@@ -33,13 +52,12 @@ struct RootView: View {
     }
 }
 
-struct RootView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview{
         RootView()
+            .environmentObject(RootViewModel())
             .environment(\.locale, .init(identifier: "es"))
             //.preferredColorScheme(.light)
         //.environment(\.locale, .init(identifier: "en"))
-    }
 }
 
 

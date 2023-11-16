@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ErrorView: View {
+    @EnvironmentObject var rootViewModel: RootViewModel
     private var error: String
     private var onRetry: (() -> Void)?
 
@@ -35,24 +36,24 @@ struct ErrorView: View {
 
             Spacer()
 
-            Button(NSLocalizedString("BACK", comment: "")) {
-                onRetry?()
-            }
-            .frame(width: 300, height: 50)
-            .background(.orange)
-            .font(.title2)
-            .bold()
-            .foregroundColor(.white)
-            .cornerRadius(15)
-            .shadow(radius: 10.0, x: 10, y: 10)
-            .id(2)
+            Button(action: {
+                rootViewModel.status = .none
+            }, label: {
+                Text("BACK")
+                    .frame(width: 300, height: 50)
+                    .background(.orange)
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                    .shadow(radius: 10.0, x: 10, y: 10)
+                    .id(2)
+            })
         }
     }
 }
 
-struct ErrorView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview{
         ErrorView(error: "Error!!")
             //.environmentObject(ViewModelHeros())
-    }
 }
