@@ -27,6 +27,12 @@
 		EB7C29E12B03CC800031AE4C /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C29E02B03CC800031AE4C /* KeyChain.swift */; };
 		EB7C29E32B03D1DF0031AE4C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C29E22B03D1DF0031AE4C /* RootViewModel.swift */; };
 		EB7C29E92B03D74C0031AE4C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C29E82B03D74C0031AE4C /* RootView.swift */; };
+		EB8281F92B06A6BD00326296 /* HeroesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8281F82B06A6BD00326296 /* HeroesView.swift */; };
+		EB8281FB2B06A6CE00326296 /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8281FA2B06A6CE00326296 /* HeroesRowView.swift */; };
+		EB8281FD2B06A71700326296 /* ViewModelHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8281FC2B06A71700326296 /* ViewModelHeros.swift */; };
+		EB8281FF2B06A73600326296 /* SeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8281FE2B06A73600326296 /* SeriesView.swift */; };
+		EB8282012B06A74300326296 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8282002B06A74300326296 /* SeriesRowView.swift */; };
+		EB8282032B06A76100326296 /* ViewModelSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8282022B06A76100326296 /* ViewModelSeries.swift */; };
 		EB9555232B06039A0094B05F /* PrpertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9555222B06039A0094B05F /* PrpertyWrappers.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +78,12 @@
 		EB7C29E02B03CC800031AE4C /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		EB7C29E22B03D1DF0031AE4C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		EB7C29E82B03D74C0031AE4C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		EB8281F82B06A6BD00326296 /* HeroesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesView.swift; sourceTree = "<group>"; };
+		EB8281FA2B06A6CE00326296 /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
+		EB8281FC2B06A71700326296 /* ViewModelHeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelHeros.swift; sourceTree = "<group>"; };
+		EB8281FE2B06A73600326296 /* SeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
+		EB8282002B06A74300326296 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
+		EB8282022B06A76100326296 /* ViewModelSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSeries.swift; sourceTree = "<group>"; };
 		EB9555222B06039A0094B05F /* PrpertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrpertyWrappers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				EB7C29E22B03D1DF0031AE4C /* RootViewModel.swift */,
+				EB8281FC2B06A71700326296 /* ViewModelHeros.swift */,
+				EB8282022B06A76100326296 /* ViewModelSeries.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,10 +227,30 @@
 		EB7C29D32B03C8960031AE4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB8281F62B06A69300326296 /* ListaHeroes */,
+				EB8281F72B06A69F00326296 /* SeriesHeroes */,
 				EB9555242B060A850094B05F /* Tools */,
 				EB7C29E82B03D74C0031AE4C /* RootView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EB8281F62B06A69300326296 /* ListaHeroes */ = {
+			isa = PBXGroup;
+			children = (
+				EB8281F82B06A6BD00326296 /* HeroesView.swift */,
+				EB8281FA2B06A6CE00326296 /* HeroesRowView.swift */,
+			);
+			path = ListaHeroes;
+			sourceTree = "<group>";
+		};
+		EB8281F72B06A69F00326296 /* SeriesHeroes */ = {
+			isa = PBXGroup;
+			children = (
+				EB8281FE2B06A73600326296 /* SeriesView.swift */,
+				EB8282002B06A74300326296 /* SeriesRowView.swift */,
+			);
+			path = SeriesHeroes;
 			sourceTree = "<group>";
 		};
 		EB9555242B060A850094B05F /* Tools */ = {
@@ -369,12 +403,18 @@
 				EB6C4E712B05229C000DEBA8 /* LoadView.swift in Sources */,
 				EB7C29A42B03C7470031AE4C /* Marvel_SuperPoderes.xcdatamodeld in Sources */,
 				EB700F6C2B04B113001D8D8B /* StatusModel.swift in Sources */,
+				EB8282032B06A76100326296 /* ViewModelSeries.swift in Sources */,
 				EB7C299F2B03C7470031AE4C /* Marvel_SuperPoderesApp.swift in Sources */,
 				EB9555232B06039A0094B05F /* PrpertyWrappers.swift in Sources */,
 				EB700F702B04B6C1001D8D8B /* HerosModel.swift in Sources */,
+				EB8281F92B06A6BD00326296 /* HeroesView.swift in Sources */,
+				EB8282012B06A74300326296 /* SeriesRowView.swift in Sources */,
+				EB8281FB2B06A6CE00326296 /* HeroesRowView.swift in Sources */,
 				EB700F6E2B04B249001D8D8B /* BaseNetwork.swift in Sources */,
 				EB7C29E12B03CC800031AE4C /* KeyChain.swift in Sources */,
 				EB7C29A62B03C7470031AE4C /* ContentView.swift in Sources */,
+				EB8281FF2B06A73600326296 /* SeriesView.swift in Sources */,
+				EB8281FD2B06A71700326296 /* ViewModelHeros.swift in Sources */,
 				EB700F722B04B6D4001D8D8B /* SeriesModel.swift in Sources */,
 				EB7C29E92B03D74C0031AE4C /* RootView.swift in Sources */,
 				EB7C29E32B03D1DF0031AE4C /* RootViewModel.swift in Sources */,

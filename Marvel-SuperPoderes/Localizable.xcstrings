@@ -31,6 +31,15 @@
         }
       }
     },
+    "Buscar Héroe..." : {
+
+    },
+    "Close" : {
+
+    },
+    "Hello, World!" : {
+
+    },
     "Heroes" : {
       "localizations" : {
         "es" : {
@@ -40,6 +49,9 @@
           }
         }
       }
+    },
+    "Héroes Marvel" : {
+
     },
     "Item at %@" : {
       "localizations" : {
