@@ -2,7 +2,14 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "Add Item" : {
       "localizations" : {
@@ -15,10 +22,24 @@
       }
     },
     "BACK" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VOLVER"
+          }
+        }
+      }
     },
     "Heroes" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heroes"
+          }
+        }
+      }
     },
     "Item at %@" : {
       "localizations" : {
@@ -31,6 +52,17 @@
       }
     },
     "loading" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando"
+          }
+        }
+      }
+    },
+    "Loading" : {
 
     },
     "Select an item" : {
