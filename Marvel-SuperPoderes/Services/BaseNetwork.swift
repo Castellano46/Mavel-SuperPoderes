@@ -30,6 +30,7 @@ enum auth: String {
 
 enum OrderBy: String {
     case id = "id"
+    case name = "name"
     //
     case formerModified = "-modified"
     case startYear = "startYear"
@@ -39,10 +40,10 @@ struct BaseNetwork {
     
     // Heroes
     func getSessionHeros(sortBy orderMethod: OrderBy) -> URLRequest {
-        
         let accessAuth = "?ts=\(auth.ts.rawValue)&apikey=\(auth.apikey.rawValue)&hash=\(auth.hash.rawValue)"
         let sortBy = "&orderBy=\(orderMethod.rawValue)"
         let urlcad: String = "\(server)\(endpoints.herosList.rawValue)\(accessAuth)\(sortBy)"
+        print("Heroes URL: \(urlcad)")  // Imprime la URL
         let url = URL(string: urlcad)
         
         var request = URLRequest(url: url!)

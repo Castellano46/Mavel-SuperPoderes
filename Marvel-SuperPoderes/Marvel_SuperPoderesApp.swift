@@ -12,12 +12,14 @@ struct Marvel_SuperPoderesApp: App {
     let persistenceController = PersistenceController.shared
     
     @StateObject var rootViewModel = RootViewModel()
+    @StateObject var viewModelHeros = ViewModelHeros()
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(rootViewModel)
+                .environmentObject(viewModelHeros)
         }
     }
 }

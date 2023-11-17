@@ -26,31 +26,29 @@ final class ViewModelSeries: ObservableObject {
     
     func getHerosSerie() {
         self.status = .loading
-        
-        URLSession.shared
-            .dataTaskPublisher(for: BaseNetwork().getSessionHerosSeries(with: hero.id, sortBy: .startYear))
-            .tryMap {
-                guard let response = $0.response as? HTTPURLResponse,
-                      response.statusCode == 200 else {
-                    throw URLError(.badServerResponse)
+            
+            URLSession.shared
+                .dataTaskPublisher(for: BaseNetwork().getSessionHerosSeries(with: hero.id, sortBy: .startYear))
+                .tryMap {
+                    guard let response = $0.response as? HTTPURLResponse,
+                          response.statusCode == 200 else {
+                        throw URLError(.badServerResponse)
+                    }
+                    return $0.data
                 }
-                
-                //TODO OK
-                return $0.data
-            }
-            .decode(type: Series.self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion {
-                case .failure:
-                    self.status = Status.error(error: "Error buscando series heroes")
-                case .finished:
-                    self.status = .loaded
+                .decode(type: Series.self, decoder: JSONDecoder())
+                .receive(on: DispatchQueue.main)
+                .sink { completion in
+                    switch completion {
+                    case .failure:
+                        self.status = Status.error(error: "Error buscando series de héroes")
+                    case .finished:
+                        self.status = .loaded
+                    }
+                } receiveValue: { data in
+                    self.series = data.data.results
                 }
-            } receiveValue: { data in
-                self.series = data.data.results
-            }
-            .store(in: &suscriptors)
+                .store(in: &suscriptors)
     }
     
     func getSeriesTest() {

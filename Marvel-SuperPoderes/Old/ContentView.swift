@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @EnvironmentObject var viewModelHeros: ViewModelHeros
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -20,9 +21,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
+                    NavigationLink(destination: Text("Item at \(item.timestamp!, formatter: itemFormatter)")) {
                         Text(item.timestamp!, formatter: itemFormatter)
                     }
                 }
@@ -35,8 +34,8 @@ struct ContentView: View {
                 }
 #endif
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    NavigationLink(destination: HeroesView(viewModel: viewModelHeros)) {
+                        Label("Marvel Heroes", systemImage: "star")
                     }
                 }
             }

@@ -55,5 +55,5 @@ struct ErrorView: View {
 
 #Preview{
         ErrorView(error: "Error!!")
-            //.environmentObject(ViewModelHeros())
+            .environmentObject(ViewModelHeros())
 }

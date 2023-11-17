@@ -11,18 +11,19 @@ struct HeroesView: View {
     @StateObject var viewModel: ViewModelHeros
     @State private var filter: String = ""
     @EnvironmentObject var viewModelRoot: RootViewModel
-    
+
     var body: some View {
-        NavigationStack{
-            List{
+        NavigationStack {
+            List {
                 if let heros = viewModel.heros {
                     ForEach(heros) { data in
-                        NavigationLink {
-                            SeriesView(hero: data)
-                        } label: {
-                            HeroesRowView(hero: data)
-                                .frame(height: 200)
-                        }
+                        NavigationLink(
+                            destination: SeriesView(hero: data),
+                            label: {
+                                HeroesRowView(hero: data)
+                                    .frame(height: 200)
+                            }
+                        )
                     }
                 }
             }

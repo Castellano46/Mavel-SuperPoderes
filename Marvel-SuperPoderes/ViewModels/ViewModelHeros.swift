@@ -24,27 +24,30 @@ final class ViewModelHeros: ObservableObject {
     
     func getHeros(filter: String){
         self.status = .loading
-        
+            
         URLSession.shared
-            .dataTaskPublisher(for: BaseNetwork().getSessionHeros(sortBy: .id))
-            .tryMap{
-                guard let response = $0.response as? HTTPURLResponse,
+            .dataTaskPublisher(for: BaseNetwork().getSessionHeros(sortBy: .formerModified))
+            .tryMap { output in
+                guard let response = output.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
+                    print("Error: \(output.response)")
                     throw URLError(.badServerResponse)
                 }
-                return $0.data
+                return output.data
             }
-            .decode(type: [Heros].self, decoder: JSONDecoder())
+            .decode(type: Response.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink { completion in
-                switch completion{
-                case.failure:
-                    self.status = .error(error: "Error al buscar Heroes")
+                switch completion {
+                case .failure(let error):
+                    print("Failure: \(error)")
+                    self.status = .error(error: error.localizedDescription)
                 case .finished:
                     self.status = .loaded
                 }
             } receiveValue: { data in
-                self.heros = data
+                print("Received data: \(data)")
+                self.heros = data.data.results
             }
             .store(in: &suscriptors)
     }

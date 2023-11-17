@@ -14,20 +14,15 @@ struct RootView: View {
 
     var body: some View {
         
-        switch rootViewModel.status{
-        case Status.none:
-            withAnimation{
-                LoadView()
-            }
-        case .loading:
-            withAnimation{
+        switch rootViewModel.status {
+        case Status.none, Status.loading:
+            withAnimation {
                 LoadView()
             }
         case .loaded:
-            Text("Heroes")
-            //HeroesView(viewModel: viewmodel)
+            HeroesView(viewModel: ViewModelHeros())
         case .error(error: let errorString):
-            withAnimation{
+            withAnimation {
                 ErrorView(error: errorString)
             }
         }
