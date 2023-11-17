@@ -10,16 +10,18 @@ import SwiftUI
 @main
 struct Marvel_SuperPoderesApp: App {
     let persistenceController = PersistenceController.shared
-    
     @StateObject var rootViewModel = RootViewModel()
-    @StateObject var viewModelHeros = ViewModelHeros()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(rootViewModel)
-                .environmentObject(viewModelHeros)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        rootViewModel.status = .loaded
+                    }
+                }
         }
     }
 }

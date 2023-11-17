@@ -43,7 +43,7 @@ struct BaseNetwork {
         let accessAuth = "?ts=\(auth.ts.rawValue)&apikey=\(auth.apikey.rawValue)&hash=\(auth.hash.rawValue)"
         let sortBy = "&orderBy=\(orderMethod.rawValue)"
         let urlcad: String = "\(server)\(endpoints.herosList.rawValue)\(accessAuth)\(sortBy)"
-        print("Heroes URL: \(urlcad)")  // Imprime la URL
+        print("Heroes URL: \(urlcad)")
         let url = URL(string: urlcad)
         
         var request = URLRequest(url: url!)

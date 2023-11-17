@@ -137,11 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				EB7C29D42B03C9240031AE4C /* Info.plist */,
+				EB7C29CF2B03C8760031AE4C /* Models */,
 				EB7C29D32B03C8960031AE4C /* View */,
 				EB7C29D22B03C88E0031AE4C /* ViewModels */,
 				EB7C29D12B03C8880031AE4C /* Tools */,
 				EB7C29D02B03C8820031AE4C /* Services */,
-				EB7C29CF2B03C8760031AE4C /* Models */,
 				EB7C29CE2B03C8420031AE4C /* Old */,
 				EB7C299E2B03C7470031AE4C /* Marvel_SuperPoderesApp.swift */,
 				EB7C29A72B03C7480031AE4C /* Assets.xcassets */,
@@ -227,9 +227,9 @@
 		EB7C29D32B03C8960031AE4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB9555242B060A850094B05F /* Tools */,
 				EB8281F62B06A69300326296 /* ListaHeroes */,
 				EB8281F72B06A69F00326296 /* SeriesHeroes */,
-				EB9555242B060A850094B05F /* Tools */,
 				EB7C29E82B03D74C0031AE4C /* RootView.swift */,
 			);
 			path = View;

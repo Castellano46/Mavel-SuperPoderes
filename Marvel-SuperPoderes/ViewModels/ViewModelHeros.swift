@@ -46,7 +46,7 @@ final class ViewModelHeros: ObservableObject {
                     self.status = .loaded
                 }
             } receiveValue: { data in
-                print("Received data: \(data)")
+                //print("Received data: \(data)")
                 self.heros = data.data.results
             }
             .store(in: &suscriptors)

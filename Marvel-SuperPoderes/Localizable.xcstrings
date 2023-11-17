@@ -32,11 +32,15 @@
         }
       }
     },
-    "Buscar Héroe..." : {
-
-    },
     "Close" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        }
+      }
     },
     "Heroes" : {
       "extractionState" : "stale",
@@ -49,8 +53,19 @@
         }
       }
     },
-    "Héroes Marvel" : {
+    "Heroes Marvel" : {
 
+    },
+    "Héroes Marvel" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Héroes Marvel"
+          }
+        }
+      }
     },
     "Item at %@" : {
       "localizations" : {
@@ -74,10 +89,24 @@
       }
     },
     "Loading" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando"
+          }
+        }
+      }
     },
     "Marvel Heroes" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marvel Héroes"
+          }
+        }
+      }
     },
     "Select an item" : {
       "localizations" : {

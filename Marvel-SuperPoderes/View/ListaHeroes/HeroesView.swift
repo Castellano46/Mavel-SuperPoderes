@@ -15,23 +15,21 @@ struct HeroesView: View {
     var body: some View {
         NavigationStack {
             List {
-                if let heros = viewModel.heros {
-                    ForEach(heros) { data in
-                        NavigationLink(
-                            destination: SeriesView(hero: data),
-                            label: {
-                                HeroesRowView(hero: data)
-                                    .frame(height: 200)
-                            }
-                        )
-                    }
+                ForEach(viewModel.filteredHeros(filter: filter)) { data in
+                    NavigationLink(
+                        destination: SeriesView(hero: data),
+                        label: {
+                            HeroesRowView(hero: data)
+                                .frame(height: 200)
+                        }
+                    )
                 }
             }
-            .navigationTitle("Héroes Marvel")
+            .navigationTitle("Heroes Marvel")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
-                        //viewModelRoot.loading
+                        viewModel.getHeros(filter: filter)
                     }, label: {
                         HStack {
                             Image(systemName: "xmark.circle")
@@ -42,12 +40,16 @@ struct HeroesView: View {
                 }
             }
         }
-        .searchable(text: $filter,
-                    placement: .navigationBarDrawer(displayMode: .always),
-                    prompt: "Buscar Héroe...")
-        .onChange(of: filter) { oldValue, newValue in
-            viewModel.getHeros(filter: oldValue)
+        .searchable(text: $filter)
+    }
+}
+
+extension ViewModelHeros {
+    func filteredHeros(filter: String) -> [Heros] {
+        guard !filter.isEmpty else {
+            return heros ?? []
         }
+        return (heros ?? []).filter { $0.name.lowercased().contains(filter.lowercased()) }
     }
 }
 
