@@ -17,6 +17,7 @@ struct HeroesRowView: View {
                     .resizable()
                     .cornerRadius(20)
                     .opacity(0.8)
+                    .id(0)
             } placeholder: {
                 Image(systemName: "person")
                     .resizable()
@@ -28,9 +29,10 @@ struct HeroesRowView: View {
                 HStack {
                     Text(hero.name)
                         .font(.title2)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(.white)
                         .bold()
                         .padding([.top, .leading], 20)
+                        .id(1)
                     Spacer()
                 }
                 Spacer()

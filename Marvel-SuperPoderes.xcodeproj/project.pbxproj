@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB53640C2B079369009415D7 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = EB53640B2B079369009415D7 /* ViewInspector */; };
 		EB6C4E712B05229C000DEBA8 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C4E702B05229C000DEBA8 /* LoadView.swift */; };
 		EB6C4E732B0522CF000DEBA8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C4E722B0522CF000DEBA8 /* ErrorView.swift */; };
 		EB700F6C2B04B113001D8D8B /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB700F6B2B04B113001D8D8B /* StatusModel.swift */; };
@@ -100,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB53640C2B079369009415D7 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +301,9 @@
 				EB7C29B32B03C7480031AE4C /* PBXTargetDependency */,
 			);
 			name = "Marvel-SuperPoderesTests";
+			packageProductDependencies = (
+				EB53640B2B079369009415D7 /* ViewInspector */,
+			);
 			productName = "Marvel-SuperPoderesTests";
 			productReference = EB7C29B12B03C7480031AE4C /* Marvel-SuperPoderesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -356,6 +361,7 @@
 			mainGroup = EB7C29922B03C7470031AE4C;
 			packageReferences = (
 				EB7C29D52B03C9FC0031AE4C /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				EB53640A2B079369009415D7 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = EB7C299C2B03C7470031AE4C /* Products */;
 			projectDirPath = "";
@@ -780,6 +786,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EB53640A2B079369009415D7 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.8;
+			};
+		};
 		EB7C29D52B03C9FC0031AE4C /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -791,6 +805,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EB53640B2B079369009415D7 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB53640A2B079369009415D7 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
 		EB7C29D62B03C9FC0031AE4C /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EB7C29D52B03C9FC0031AE4C /* XCRemoteSwiftPackageReference "keychain-swift" */;

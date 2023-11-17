@@ -56,7 +56,6 @@ final class ViewModelHeros: ObservableObject {
         self.status = .loading
         self.heros = getHerosDesign()
         self.status = .loaded
-       
     }
     
     func getHerosDesign() -> [Heros]{

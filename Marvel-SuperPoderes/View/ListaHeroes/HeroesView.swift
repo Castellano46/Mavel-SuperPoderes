@@ -25,6 +25,7 @@ struct HeroesView: View {
                     )
                 }
             }
+            .id(0)
             .navigationTitle("Heroes Marvel")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

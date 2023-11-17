@@ -25,10 +25,11 @@ struct LoadView: View {
                     .padding(.top, -340)
 
                 ProgressView(NSLocalizedString("Loading", comment: ""))
-                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
                     .foregroundColor(.blue)
                     .font(.system(size: 20, weight: .bold))
                     .scaleEffect(2.0)
+                    .id(0)
             }
             .padding([.leading, .trailing], 20)
         }
