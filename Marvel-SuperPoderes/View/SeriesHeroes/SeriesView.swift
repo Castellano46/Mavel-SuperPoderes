@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SeriesView: View {
     var hero: Heros
-    //@ObservedObject var viewModelHeros: ViewModelHeros
     
     var body: some View {
         VStack {
@@ -28,13 +27,13 @@ struct SeriesView: View {
                 .cornerRadius(20)
                 .opacity(0.8)
                 .padding([.leading, .trailing], 10)
+                .frame(height: 200)
         } placeholder: {
             Image(systemName: "person")
                 .resizable()
                 .cornerRadius(20)
                 .opacity(0.8)
         }
-        
     }
 }
 

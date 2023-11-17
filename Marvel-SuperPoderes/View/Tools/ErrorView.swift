@@ -25,7 +25,7 @@ struct ErrorView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(.red)
-                .frame(width: 50, height: 50) // Ajusta el tamaño aquí
+                .frame(width: 50, height: 50)
                 .padding()
                 .id(0)
 
