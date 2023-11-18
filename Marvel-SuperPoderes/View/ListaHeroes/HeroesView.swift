@@ -11,14 +11,20 @@ struct HeroesView: View {
     @StateObject var viewModel: ViewModelHeros
     @State private var filter: String = ""
     @EnvironmentObject var viewModelRoot: RootViewModel
+    @State private var isLoading: Bool = false
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(viewModel.filteredHeros(filter: filter)) { data in
                     NavigationLink(
-                        destination: SeriesView(hero: data),
-                        label: {
+                        destination: SeriesView(viewModel: ViewModelSeries(), hero: data)
+                            .onAppear {
+                                isLoading = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                    isLoading = false
+                                }
+                            },label: {
                             HeroesRowView(hero: data)
                                 .frame(height: 200)
                         }
@@ -40,6 +46,13 @@ struct HeroesView: View {
                     })
                 }
             }
+            .overlay(
+                Group {
+                    if isLoading {
+                        LoadView()
+                    }
+                }
+            )
         }
         .searchable(text: $filter)
     }
@@ -57,3 +70,4 @@ extension ViewModelHeros {
 #Preview {
     HeroesView(viewModel: ViewModelHeros(testing: true))
 }
+
