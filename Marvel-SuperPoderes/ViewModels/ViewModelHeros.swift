@@ -14,6 +14,7 @@ final class ViewModelHeros: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
+    // Inicializador para el modo testing, modo prueba se cargan heroes de prueba, si no se carga normal
     init(testing: Bool = false) {
         if testing {
             getHerosTesting()
@@ -22,6 +23,7 @@ final class ViewModelHeros: ObservableObject {
         }
     }
     
+    // Obtención de heroes
     func getHeros(filter: String) {
         self.status = .loading
         
@@ -48,6 +50,7 @@ final class ViewModelHeros: ObservableObject {
         self.status = .loaded
     }
     
+    // Solicitud de datos
     private func fetchData() -> AnyPublisher<Data, URLError> {
         return URLSession.shared.dataTaskPublisher(for: BaseNetwork().getSessionHeros(sortBy: .formerModified))
             .tryMap { output -> Data in

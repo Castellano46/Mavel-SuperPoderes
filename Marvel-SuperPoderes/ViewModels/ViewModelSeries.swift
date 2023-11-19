@@ -16,6 +16,7 @@ final class ViewModelSeries: ObservableObject {
 
     init() {}
 
+    // Obtener series de un héroe
     func getHerosSerie(for hero: Heros) {
         self.status = .loading
 

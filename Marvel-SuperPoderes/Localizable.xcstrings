@@ -54,7 +54,14 @@
       }
     },
     "Heroes Marvel" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Héroes Marvel"
+          }
+        }
+      }
     },
     "Héroes Marvel" : {
       "extractionState" : "stale",
@@ -137,7 +144,14 @@
       }
     },
     "without_description" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

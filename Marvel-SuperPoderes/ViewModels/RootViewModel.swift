@@ -9,17 +9,19 @@ import Foundation
 import Combine
 
 final class RootViewModel: ObservableObject {
-    @Published var status = Status.none
+    @Published var status = Status.none //Estado actual
     //@Published var tokenJWT: String = ""
-    @Published var heros: [Heros]?
+    @Published var heros: [Heros]? //Almacenar la lista de héroes
     
     var suscriptors = Set<AnyCancellable>()
     
     func getHeros(sortBy order: OrderBy) {
-        self.status = .loading
+        self.status = .loading // Estado cargando antes de la solicitud
         
         URLSession.shared
             .dataTaskPublisher(for: BaseNetwork().getSessionHeros(sortBy: .id))
+        
+        // Manejo de errores y decodificacion de datos
             .tryMap{
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
