@@ -37,7 +37,7 @@ enum OrderBy: String {
 
 struct BaseNetwork {
     
-    // Heroes
+    // Héroes
     func getSessionHeros(sortBy orderMethod: OrderBy) -> URLRequest {
         let accessAuth = "?ts=\(auth.ts.rawValue)&apikey=\(auth.apikey.rawValue)&hash=\(auth.hash.rawValue)"
         let sortBy = "&orderBy=\(orderMethod.rawValue)"

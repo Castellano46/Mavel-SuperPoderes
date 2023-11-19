@@ -11,7 +11,7 @@ import Combine
 final class RootViewModel: ObservableObject {
     @Published var status = Status.none //Estado actual
     //@Published var tokenJWT: String = ""
-    @Published var heros: [Heros]? //Almacenar la lista de héroes
+    @Published var heros: [Heros]? //Almacenar lista de héroes
     
     var suscriptors = Set<AnyCancellable>()
     

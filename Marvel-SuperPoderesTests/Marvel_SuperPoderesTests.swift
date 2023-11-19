@@ -78,6 +78,7 @@ final class Marvel_SuperPoderesTests: XCTestCase {
         
         let boton = try view.inspect().find(viewWithId: 2)
         XCTAssertNotNil(boton)
+        
         try boton.button().tap()
     }
     
@@ -109,7 +110,6 @@ final class Marvel_SuperPoderesTests: XCTestCase {
             XCTAssertFalse(series.isEmpty)
             
         } else {
-            
             XCTFail("No se obtuvieron datos de la serie")
         }
     }
@@ -162,10 +162,10 @@ final class Marvel_SuperPoderesTests: XCTestCase {
                 switch status {
                 case .error(let error):
                     XCTFail("Error: \(error)")
-                    expectation.fulfill() // Llamada en caso de error
+                    expectation.fulfill() // Llamada en caso de error.
                 case .loaded:
                     XCTAssert(true)
-                    expectation.fulfill() // Llamada en caso de carga
+                    expectation.fulfill() // Llamada en caso de carga.
                 default:
                     break
                 }

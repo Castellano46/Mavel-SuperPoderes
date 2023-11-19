@@ -26,7 +26,7 @@ struct LoadView: View {
 
                 ProgressView(NSLocalizedString("Loading", comment: ""))
                     .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color(UIColor(red: 0/255.0, green: 155.0/255.0, blue: 148.0/255.0, alpha: 1.0)))
                     .font(.system(size: 20, weight: .bold))
                     .scaleEffect(2.0)
                     .id(0)
