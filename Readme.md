@@ -1,6 +1,6 @@
 
 ## Práctica para el módulo SuperPoderes de KeepCoding.
-En esta práctica desarrollo una pequeña app con xcode y lenguaje swift bajo el patrón de diseño MVVM (Model View ViewModel). Para su elaboración se ha utilizado la libreria ViewInspector para realizar test, además nos introducimos en SwiftUI y usamos Combine.
+En esta práctica desarrollo una pequeña app con xcode y lenguaje swift bajo el patrón de diseño MVVM (Model View ViewModel). Para su elaboración se ha utilizado la libreria **ViewInspector** para realizar test, además nos introducimos en **SwiftUI** y usamos **Combine**.
 
 
 
